@@ -23,9 +23,9 @@ function wishMe(){
         speak("Good Evening Sir")
     }
 }
-// window.addEventListener('load',()=>{
-//     wishMe()
-// })
+window.addEventListener('load',()=>{
+     wishMe()
+})
 let speechRecognition= window.SpeechRecognition || window.webkitSpeechRecognition 
 let recognition =new speechRecognition()
 recognition.onresult=(event)=>{
@@ -89,4 +89,5 @@ function takeCommand(message){
         speak(finalText)
         window.open(`https://google.com//search?q=${message.replace("Jarvis","")}`,"_blank")
     }
+
 }
